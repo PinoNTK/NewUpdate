@@ -45,32 +45,35 @@ $(document).ready(function(){
         if(comparingResult_cpa==0){
           $("#cpa>span").text("Type your CPA here!");
         }
+        if(comparingResult_major==0){
+          $("#major>span").text("Type your major here!");
+        }
         if(comparingResult_name==0||personal_Details_name==""){
           $("#personal_Details_name").text("No name. Let's add one!");
         }
         if(comparingResult_birthday==0){
-          $("#birthday").append("Type your birthday here!");
+          $("#birthday>span").text("Type your birthday here!");
         }
         if(comparingResult_address==0){
-          $("#address").append("Type your address here!");
+          $("#address>span").text("Type your address here!");
         }
         if(comparingResult_mail==0){
-          $("#mail").append("Type your mail address here!");
+          $("#mail>span").text("Type your mail address here!");
         }
         if(comparingResult_phone==0){
-          $("#phone").append("Type your phone number here!");
+          $("#phone>span").text("Type your phone number here!");
         }
         if(comparingResult_applyingPosition==0){
           $("#applyingPosition>span").text("Type your applying position here!");
         }
         if(comparingResult_edu_time==0){
-          $("#edu_time").append("Type your learning period here!");
+          $("#edu_time>span").text("Type your learning period here!");
         }
         if(comparingResult_university==0){
-          $("#university,#UNIVERSITY").append("Type your university here!");
+          $("#university>span").text("Type your university here!");
         }
         if(comparingResult_exp_time==0){
-          $(".exp_time").text("Type your company here!");
+          $(".exp_time>span").text("Type your company here!");
         }
         if(comparingResult_position==0){
           $(".position").text("Type your working position here!");
@@ -158,7 +161,7 @@ $(document).ready(function(){
       $("#birthday").hide();
     }
     if(birthday==""){
-      $("#birthday").append("Type your birthday here!")
+      $("#birthday").text("Type your birthday here!")
     }
     //address:
     var address= $( "#address" ).text();
@@ -168,7 +171,7 @@ $(document).ready(function(){
       $("#address").hide();
     }
     if(address==""){
-      $("#address").append("Type your address here!");
+      $("#address").text("Type your address here!");
     }
     //mail:
     var mail= $( "#mail" ).text();
