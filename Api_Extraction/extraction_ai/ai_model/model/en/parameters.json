@@ -1,0 +1,1 @@
+{"token_embedding_dimension": 100, "character_lstm_hidden_state_dimension": 50, "token_lstm_hidden_state_dimension": 50, "character_embedding_dimension": 25, "use_lstm_character": false}

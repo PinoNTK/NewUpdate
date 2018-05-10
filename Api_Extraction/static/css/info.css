@@ -1,0 +1,45 @@
+.btn_custom{
+	background-color: #009688!important;
+	color: white;
+	border-radius: 0px;
+}
+#saveInfo{
+	display: none;
+}
+.editSelect{
+	height: 29px;
+    margin-top: -6px;
+}
+h6{
+	font-size: 19px !important;
+}
+h5{
+	font-size: 18px !important;
+}
+#personal_Details_name{
+	color: #757575;
+}
+p{
+	color: #757575;
+}
+#upload-photo {
+/*   opacity: 0;
+   position: absolute;
+   z-index: -1;*/
+   display: none;
+}
+#photoUpload{
+	margin-left: 34%;
+    margin-top: 2%;
+}
+#changePhoto{
+	width: 10%;
+    height: 34px;
+    background-color: #009688!important;
+    display:none;
+}
+#hr_line{
+	width: 93%; 
+	margin-left: 3%;
+	display: none;
+}

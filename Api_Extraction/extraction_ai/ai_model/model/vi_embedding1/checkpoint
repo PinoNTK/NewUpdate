@@ -1,0 +1,2 @@
+model_checkpoint_path: "ner_entity.ckpt"
+all_model_checkpoint_paths: "ner_entity.ckpt"

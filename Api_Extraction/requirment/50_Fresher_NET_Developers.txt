@@ -1,0 +1,32 @@
+CÁC PHÚC LỢI DÀNH CHO BẠN
+Đối với vị trí Fresher, bạn sẽ nhận được trợ cấp đào tạo toàn khóa học lên đến 15,000,000VND/khóa
+Cơ hội phát triển bản thân và làm việc cùng các chuyên gia giỏi nhất của FPT Software và khách hàng
+Tiếp cận với những công nghệ tiên tiến hàng đầu về Web, phát triển kỹ năng mềm
+MÔ TẢ CÔNG VIỆC
+Số lượng: 50
+
+CƠ HỘI
+-	Cơ hội tham gia và trở thành trở thành “key member” trong Siêu dự án lớn nhất lịch sử của FPT Software: Dự án về xây dựng hệ thống ERP (hệ thống quản lý hoạch định tài nguyên doanh nghiệp) cho các Doanh nghiệp vừa và nhỏ tại Nhật Bản, kéo dài trong 3 năm, quy mô lên đến 1000 tỷ đồng với số lượng người khoảng 800 người/tháng bao gồm những chuyên gia hàng đầu của Fsoft và đối tác đến từ Nhật Bản; Dự án phát triển trên nền tảng công .Net Web với công nghệ Front End tiên tiến nhất là Angular 4.
+-	Tham gia chương trình Đào tạo tân binh: Đào tạo chuyên sâu trong vòng 2 – 3 tháng về C#/.Net để chuẩn bị các kiến thức và hoàn thiện kỹ năng trước khi tham gia vào dự án, với các nội dung bao gồm:
+-	Kiến thức về Database: Hệ quản trị cơ sở dữ liệu Microsoft SQL Server – hiểu và làm việc với truy vấn SQL, sử dụng các đối tượng nâng cao Stored Procedures, Triggers.
+-	Lập trình .NET (C#): Làm việc với ngôn ngữ lập trình hướng đối tượng C#, thao tác với các kiểu dữ liệu nâng cao trong C#, kết nối cơ sở dữ liệu, làm việc với Winforms. Thiết kế web với HTML, CSS, NET, ADO.NET, MVC. Sử dụng thành thạo Entity Framework.
+-	Phát triển phần mềm theo quy trình chuyên nghiệp: Hiểu các bước thực hiện dự án, bao gồm thiết kế ứng dụng, làm GUI, thiết kế code, thực hiện Unit test, kiểm tra chất lượng dự án. Luyện tập kỹ năng code trong dự án với các chuyên gia công nghệ & lập trình viên nhiều năm kinh nghiệm.
+YÊU CẦU CÔNG VIỆC
+-	Là sinh viên đã/sắp tốt nghiệp chuyên ngành Công nghệ thông tin, Toán tin, Khoa học máy tính, Kỹ thuật phần mềm, Điện tử viễn thông… hoặc các chuyên ngành có liên quan.
+-	Nắm vững kiến thức cơ bản về lập trình hướng đối tượng và C#/.Net.
+-	Có thể tham gia đào tạo/làm việc Full-time từ thứ 2 – thứ 6.
+
+QUYỀN LỢI
+-	Đối với vị trí Fresher, bạn sẽ nhận được trợ cấp đào tạo toàn khóa học lên đến 15,000,000VND/khóa 3 tháng. Đối với các vị trí làm việc trực tiếp tại dự án, mức thu nhập hấp dẫn tương xứng với kỹ năng và kinh nghiệm của bạn.
+-	Cơ hội phát triển bản thân và làm việc cùng các chuyên gia giỏi nhất của FPT Software và khách hàng lớn đến từ khắp thế giới.
+-	Tiếp cận với những công nghệ tiên tiến hàng đầu về Web, phát triển kỹ năng mềm & định hướng nghề nghiệp, tư vấn bí quyết thành công từ các chuyên gia.
+-	Trải nghiệm văn hóa đặc trưng, môi trường làm việc hiện đại bậc nhất Việt Nam tại các Campus của FPT Software.
+
+CONTACT
+Ứng viên vui lòng gửi hồ sơ ứng tuyển bao gồm CV và bảng điểm với email subject: [C#/.Net]_Họ và tên về địa chỉ sau:
+Recruitment Department
+FPT Software Workforce Development
+Contact Person
+Ms. Lê Huỳnh Thanh Trúc (HCM)
+Mr. Nguyễn Thế Cường (HN)
+Mr. Lê Trương Hiếu (ĐN)

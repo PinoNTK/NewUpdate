@@ -1,0 +1,19 @@
+CÁC PHÚC LỢI DÀNH CHO BẠN
+Thưởng cân bằng công việc và cuộc sống~ 6 ngày/năm
+Chế độ đào tạo năng lực theo “vùng lõm” (đào tạo bổ sung để phát triển các năng lực theo khung chuẩn
+Thưởng KPI, Thưởng doanh số, theo vị trí và mức độ đóng góp vào thành quả
+MÔ TẢ CÔNG VIỆC
+-	Tham gia thiết kế và phát triển các ứng dụng theo nền tảng odoo.
+-	Phát triển các tính năng mới đáp ứng yêu cầu người dùng
+-	Phối hợp với nhân sự trong nhóm để phân tích, thiết kế phần mềm ..
+-	Tiếp nhận các yêu cầu mới trong quá trình vận hành và phát triển theo yêu cầu người dùng.
+-	Khắc phục các sự cố phát sinh trong quá trình vận hành
+-	Nghiên cứu và đề xuất giải pháp nhằm tối ưu tính năng .
+- Lập kế hoạch công việc hàng tháng theo từng giai đoạn dự án
+-	Tiếp nhận hệ thống từ đối tác triển khai phần mềm.
+YÊU CẦU CÔNG VIỆC
+- Thành thạo ngôn ngữ lập trình: Python trên nền tảng Odoo, Javascript, PHP.
+- Thành thạo cơ sở dữ liệu : SQL server, Postgres
+- Sử dụng thành thạo hệ điều hành Linux centos, Ubuntu
+- Ưu tiên đọc hiểu tài liệu tiếng anh
+- Tối thiểu 2 năm kinh nghiệm ở vị trí tương đương.

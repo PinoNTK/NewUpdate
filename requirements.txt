@@ -1,0 +1,17 @@
+django==2.0.3
+django-jet
+google-api-python-client==1.4.1
+FeedParser
+djangorestframework
+django-ckeditor
+drfdocs
+numpy
+Pillow
+nltk
+pdfminer3k
+underthesea==1.1.7a2
+langdetect
+pandas
+sklearn
+datefinder
+opencv-python

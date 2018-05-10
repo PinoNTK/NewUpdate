@@ -1,0 +1,28 @@
+CÁC PHÚC LỢI DÀNH CHO BẠN
+Lương, thưởng và các chế độ phúc lợi, đãi ngộ hấp dẫn
+Hưởng đầy đủ quyền lợi theo Bộ luật Lao động
+Được đào tạo để trở thành Chuyên gia Tuyển dụng Quốc tế trong 1-2 năm
+MÔ TẢ CÔNG VIỆC
+Senior Developper - Chuyên gia lập trình là chương trình tuyển dụng Chuyên gia công nghệ thông tin của Tổ hợp công nghệ giáo dục Topica nhằm tìm kiếm những ứng viên có khả năng và kinh nghiệm làm việc tốt cùng Topica thực hiện sứ mệnh chiếm lĩnh thị trường Công nghệ Giáo dục trực tuyến tại Đông Nam Á.
+
+1. Thách thức:
+- Phát triển sản phẩm/module mới hoạt động ổn định.
+- Tối ưu hệ thống xử lý đáp ứng được hàng trăm nghìn giao dịch lớn đồng thời.
+- Tuân thủ quy trình phát triển sản phẩm theo mô hình Agile, Scrum
+- Hướng dẫn, đào tạo các thành viên mới.
+
+2. Quyền lợi:
+- Thu nhập cạnh tranh dựa trên level và thưởng năng suất làm việc (từ 500$ ~ 2000$)
+- Đánh giá liên tục, 3 tháng 1 lần để tăng level và thưởng năng suất.
+- Môi trường làm việc chủ động thời gian, không gò bó, không bị ép tiến độ như đối tác nước ngoài, được đàm phán deadline với khách hàng.
+- Tham gia phát triển hệ thống phần mềm lớn, trọng điểm cùng các software architect của tổ hợp.
+- Được vận dụng quy trình outsourcing để làm việc.
+- Được lựa chọn làm các công nghệ Java, .NET, PHP, Ruby, Python... và các công nghệ trending (AI, Bigdata, ML, IOT, Blockchain...)
+- Tham gia phát triển hệ thống phần mềm lớn, trọng điểm cùng các software architect của tổ hợp.
+- Trải nghiệm đầy đủ giai đoạn của build product (full lifecycle).
+YÊU CẦU CÔNG VIỆC
+- Độ tuổi từ 24-32 tuổi.
+- Thành thạo ít nhất 1 ngôn ngữ lập trình backend như Java, PHP, .NET, Python, Ruby, NodeJS,...
+- Có hiểu biết về 1 trong các hệ quản trị CSDL như MySQL, SQLserver, MongoDB...
+- Có kinh nghiệm với Javascript (Angular 2, TypeScript, jQuery), HTML và REST API-s là một lợi thế.
+- Tư duy logic tốt.

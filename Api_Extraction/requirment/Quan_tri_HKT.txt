@@ -1,0 +1,24 @@
+Mô tả công việc
+1. Hình thức làm việc: toàn thời gian
+2. Mô tả công việc: http://hktconsultant.com/post/1923
+- Tham gia phát triển phần mềm bán hàng và quản lý doanh nghiệp version 5.0 (ERP hệ thống lớn).
+- Lập trình ứng dụng trên nền tảng JAVA, Maven, Spring.
+3. Làm việc tại: Cơ sở 2 - Tầng 30 số 3002B, Tòa nhà Helios Tower, số 75 Tam Trinh, Quận Hoàng Mai, Hà Nội.
+Quyền lợi được hưởng
+1. Thu nhập: từ 8.000.000 – 15.000.000 đ/ tháng tùy theo năng lực.
+2. Được đào tạo training làm quen trực tiếp về công nghệ và nền tảng lập trình hướng đối tượng với Java hiện tại Cty đang triển khai.
+3. Sau thời gian thực tập / thử việc từ 3 - 6 tháng sẽ được tuyển dụng chính thức và tham gia đầy đủ BHYT, BHXH, BHTN và các chế độ phúc lợi khác của công ty.
+Yêu cầu công việc
+1. Nắm vững Java Core, MySQL.
+2. Ưu tiên:
+- Ưu tiên ứng viên đã có kinh nghiệm làm Maven, Spring, Java Web, WebServer;
+- Ưu tiên ứng viên có khả năng làm các project lớn, quy mô từ 10.000 dòng code trở lên.
+3. Yêu cầu phải gửi kèm hồ sơ tuyển dụng 01 project java hoặc thông tin account githup có code
+Yêu cầu hồ sơ
+- CV ứng tuyển.
+- 01 project java đã làm hoặc tham gia làm tự đánh giá tốt nhất
+Thông tin liên hệ
+Người liên hệ:Ms. Hà
+Địa chỉ công ty:Cơ sở 1: Tầng 09, phòng A1-901, Tòa nhà OCT1 - A1 HandiResco, KDT Resco, Đường Phạm Văn Đồng, Q. Bắc Từ Liêm, Hà Nội - Việt Nam. Cơ sở 2: Tầng 30 số 3002B, Tòa nhà Helios Tower, số 75 Tam Trinh, Quận Hoàng Mai,
+Hạn nộp hồ sơ:30/04/2018
+Ngôn ngữ hồ sơ: Tiếng Việt

@@ -1,0 +1,289 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Trang chủ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/font-awesome/css/font-awesome.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/bootstrap/css/bootstrap.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/dropzone.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/new_upload.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <form action="/extraction/demo/" method="POST" enctype="multipart/form-data" id="simple-form">
+      <input type="file" id="file" name="myfile" accept=".pdf" />
+      <p>Drag your files here or click in this area.</p>
+      <button type="submit">Upload</button>
+    </form>
+</div>
+
+<!--
+</div>
+
+
+    <!-- Bootstrap Upload Control - START -->
+<!--     <div class="container">
+        <div class="col-md-8">
+            <form action="/extraction/api/upload/" method="post" enctype="multipart/form-data" id="simple-form">
+                <input type="file" id="file" name="myfile" />
+
+            </form>
+        </div>
+    </div> -->
+    <!--<div class="alert alert-info" id="upload_alert">-->
+    <!--<p style="text-align: right; margin-top: 20px;">-->
+                    <!--<button name="upload" type="submit" value="Upload File" class="btn btn-lg btn-primary">Upload File</button>-->
+                <!--</p>-->
+    <!-- <form id="upload-widget" method="post" action="/upload" class="dropzone"> -->
+
+<!--     <div id="myId">
+        <form action="/extraction/api/upload/" method="post" class="dropzone" id="dropzone-form">
+        <div class="fallback">
+            <input name="myfile" type="file"/>
+        </div>
+        <button type="submit">Submit data and files!</button>
+    </form>
+    </div> -->
+<!--     <div class="container" style="padding-bottom: 4%">
+        <div class="row language">
+            <form>
+                <div class="form-group" id="Data_language">
+                    <label for="language">Language:</label>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <select class="form-control">
+                                <option selected="selected">[[language_cv]]</option>
+                                <option value="en">English</option>
+                                <option value="vi">Vietnamese</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row image">
+            <form>
+                <div class="form-group" id="Data_image">
+                    <label for="image">Image</label>
+                    <img src="[[image]]" style="width: 128px;height: 128px">
+                </div>
+            </form>
+            <br>
+        </div>
+        <div class="row personal_details">
+            <form>
+                <label for="personal_details" style="color: blue; font-size: 19px">Personal Details</label>
+                <hr>
+                <div class="form-group" id="Data_personal_details">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" value="[[name]]">
+                    <label for="birthday">Birthday</label>
+                    <input type="text" class="form-control" id="birthday" value="[[birth_day]]">
+                    <label for="sex">Sex</label>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <select class="form-control">
+                                <option selected="selected">[[sex]]</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Not indentified</option>
+                            </select>
+                        </div>
+                    </div>
+                    <label for="mail">Mail</label>
+                    <input type="email" class="form-control" id="mail" value="[[mail]]">
+                    <label for="phonenumber">Phone number</label>
+                    <input type="tel" class="form-control" id="phonenumber" value="[[number]]">
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="row education">
+            <form>
+                <label for="education" style="color: blue; font-size: 19px">Education</label>
+                <hr>
+                <div class="form-group" id="Data_education">
+                    <label for="uni">University</label>
+                    <input type="text" class="form-control" id="university" value="[[university]]">
+                    <label for="cpa">CPA</label>
+                    <input type="number" step="0.01" min="0" max="4" class="form-control" id="cpa" value="[[cpa]]">
+                    <label for="language">Language</label>
+                    <input type="text" class="form-control" id="languageskill" value="[[language]]">
+                    <label for="awards">Awards</label>
+                    <input type="text" class="form-control" id="awards" value="[[awards]]">
+                </div>
+            </form>
+        </div>
+        <div class="row skills">
+            <form>
+                <label for="skills" style="color: blue; font-size: 19px">Skills</label>
+                <hr>
+                <div class="form-group" id="Data_skills">
+                    <label for="programming">Programmming</label>
+                    <input type="text" class="form-control" id="programming" value="[[programing]]">
+                    <label for="database">Database</label>
+                    <input type="text" class="form-control" id="database" value="[[database]]">
+                    <label for="framework">Framework</label>
+                    <input type="text" class="form-control" id="framework" value="[[framework]]">
+                </div>
+            </form>
+        </div>
+        <div class="row experience">
+            <form>
+                <label for="experience" style="color: blue; font-size: 19px">Experience</label>
+                <hr>
+                <div class="form-group" id="Data_experience">
+                    <label for="company">Company</label>
+                    <input type="text" class="form-control" id="company" value="[[company]]">
+                    <label for="project">Project</label>
+                    <input type="text" class="form-control" id="project" value="[[project]]">
+                    <label for="position">Position</label>
+                    <input type="text" class="form-control" id="position" value="[[position]]">
+                    <label for="time">Time</label>
+                    <input type="text" class="form-control" id="time" value="[[time]]"><br>
+                    <div id="Data_experience_skills">
+                        <label for="skill">Skills:</label> <br>
+                        <hr style="margin-top: 2px; width: 4%; margin-left: 0px;">
+                        <div class="form-group">
+                            <label for="programming">Programming</label>
+                            <input type="text" class="form-control" id="programming" value="[[programing]]">
+                            <label for="database">Database</label>
+                            <input type="text" class="form-control" id="database" value="[[database]]">
+                            <label for="framework">Framework</label>
+                            <input type="text" class="form-control" id="framework" value="[[framework]]">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <button type="button" class="btn btn-primary" id="addExperience" style="float: right; width: 6%;">Add
+                </button>
+                <br>
+            </form>
+        </div>
+        <div class="row" id="addtional_experience">
+            <form>
+                <label for="experience" style="color: blue; font-size: 19px">Add Experience</label>
+                <hr>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" class="form-control" id="company" value="">
+                    <label for="project">Project</label>
+                    <input type="text" class="form-control" id="project" value="">
+                    <label for="position">Position</label>
+                    <input type="text" class="form-control" id="position" value="">
+                    <label for="time">Time</label>
+                    <input type="text" class="form-control" id="time" value=""><br>
+                    <div id="Data_experience_skills">
+                        <label for="skill">Skills:</label> <br>
+                        <hr style="margin-top: 2px; width: 4%; margin-left: 0px;">
+                        <div class="form-group">
+                            <label for="programming">Programmming</label>
+                            <input type="text" class="form-control" id="programming" value="">
+                            <label for="database">Database</label>
+                            <input type="text" class="form-control" id="database" value="">
+                            <label for="framework">Framework</label>
+                            <input type="text" class="form-control" id="framework" value="">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <br>
+            </form>
+        </div>
+        <div class="row others">
+            <form>
+                <label for="others" style="color: blue; font-size: 19px">Others</label>
+                <hr>
+                <div class="form-group" id="Data_others">
+                    <label for="target">Target</label>
+                    <input type="text" class="form-control" id="target" value="[[target]]">
+                    <label for="hobbies">Hobbies</label>
+                    <input type="text" class="form-control" id="hobbies" value="[[hobbies]]">
+                </div>
+            </form>
+        </div
+        <hr>
+        <button type="button" class="btn btn-primary" id="editInfo" style="width: 10%; margin-left: 45%">Edit</button>
+        <button type="button" class="btn btn-primary" id="saveInfo" style="width: 10%; margin-left: 45%">Save</button>
+    </div> -->
+    <!-- you need to include the ShieldUI CSS and JS assets in order for the Upload widget to work -->
+<!--     {#      <script type="text/javascript" src="/static/js/jquery.miranda.js"></script>#}
+
+    {#            <script src="https://code.jquery.com/jquery-1.11.1.js"></script>#}
+    {#    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>#}
+
+    {#      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#} -->
+    <script type="text/javascript" src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/dropzone.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/new_upload.js' %}"></script>
+
+    <link rel="stylesheet" type="text/css"
+          href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css"/>
+    <script type="text/javascript"
+            src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <!-- <script src="{% static 'js/jquery.miranda.js' %}"></script> -->
+ <!--    <script>
+        var myData = {{ msg|safe }};
+            console.log(myData);
+    </script> -->
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $("#files").shieldUpload();
+        });
+
+        $('document').ready(function () {
+            document.getElementById("file").onchange = function () {
+                document.getElementById("simple-form").submit();
+            };
+            Dropzone.autoDiscover = false;
+
+            var myDropzone = new Dropzone("#dropzone-form", {
+                url: "/extraction/demo/",
+                autoProcessQueue: false,
+                uploadMultiple: true,
+                parallelUploads: 100,
+                maxFiles: 100,
+
+                init: function () {
+                    var myDropzon = this;
+
+                    // First change the button to actually tell Dropzone to process the queue.
+                    this.element.querySelector("button[type=submit]").addEventListener("click", function (e) {
+                        // Make sure that the form isn't actually being sent.
+                        e.preventDefault();
+                        e.stopPropagation();
+                        myDropzon.processQueue();
+                    });
+                }
+                //
+                // myDropzone.on("addedfile", function(file) {
+                //     // myDropzone.processQueue();
+                //     // $('#dropzone-form').submit();
+                //     console.log(myDropzone.files[0]);
+                //     var newForm = jQuery('<form>', {
+                //         'action': '/extraction/api/upload/',
+                //         'method': 'post'
+                //     }).append(jQuery('<input>', {
+                //         'name': 'myfile',
+                //         'value': myDropzone.files[0],
+                //         'type': 'file'
+                //     }));
+                //     // newForm.appendTo('body').submit();
+                //   });
+            });
+
+            myDropzone.on("success", function(file, response) {
+                window.location.href = response;
+            });
+    });
+    </script>
+    <!-- Bootstrap Upload Control - END -->
+<script type="text/javascript" src="/static/js/index.js"></script>
+</body>
+</html>

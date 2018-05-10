@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Details</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="{% static "/font-awesome/css/font-awesome.min.css" %}"/> -->
+<link rel="stylesheet" type="text/css" href="{% static "/bootstrap/css/bootstrap.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "/css/info.css" %}">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", "sans-serif" !important};
+</style>
+<body class="w3-light-grey">
+  
+  <div class="container-fluid">
+    <div class="row" id="editInfo">
+      <button type="button" class="btn btn-default btn-lg btn-block btn_custom" >Edit</button>
+    </div>
+    <div class="row" id="saveInfo">
+        <button type="button" class="btn btn-default btn-lg btn-block btn_custom" >Save</button>
+    </div>
+  </div>
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="{% static "/img/idol.jpg" %}" style="width:100%" alt="Avatar" id="profile_image">
+          
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2 id="personal_Details_name">[[name]]</h2>
+          </div>
+        </div>
+        <div class="container" id="photoUpload">
+            <div class="row">
+                <button type="button" class="btn btn-primary" id="changePhoto">Change</button>
+                <input type="file" name="photo" id="upload-photo" onchange="readURL(this);"/>
+            </div>
+        </div>
+        <hr id="hr_line">
+        <div class="w3-container">
+          <div id="language_cv">
+            <div class="row" style="margin-top: 25px;">
+              <div class="col-sm-1"><i class="fa fa-language fa-fw w3-margin-right w3-large w3-text-teal"></i></div>
+              <div class="col-sm-5">
+                <select class="form-control editSelect" id="language_cv_select" disabled="true">
+                    <option selected="selected" id="language_cv_selected">[[language_cv]]</option>
+                    <option value="en">English</option>
+                    <option value="vi">Vietnamese</option>
+                </select>
+              </div>
+            </div>
+            
+          </div>
+          <hr>
+          <div id="personal_Details">
+            <p id="birthday"><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-large w3-text-teal"></i>[[birthday]]</p>
+            <div class="row" style="margin-top: 4%">
+              <div class="col-sm-1"><i class="fa fa-venus-mars fa-fw w3-margin-right w3-large w3-text-teal"></i></div>
+              <div class="col-sm-5">
+                <select class="form-control editSelect" id="sex" disabled="true">
+                  <option selected="selected" >[[sex]]</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Not indentified</option>
+              </select>
+              </div>
+            </div>
+            <p  id="address"style="margin-top: 2%"><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>[[address]]</p>
+            <p id="mail"><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>[[mail]]</p>
+            <p id="phone"><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>[[phone]]</p>
+            <p id="applyingPosition"><i class="fa fa-paperclip fa-fw w3-margin-right w3-large w3-text-teal"></i>[[apply_position]]</p>
+          </div>
+          <hr>
+            <div >
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-object-group fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Objective</h2>
+        <div class="w3-container" id="objective">
+          <li class="li_objective"></li>
+        </div>
+      </div>
+            <hr>
+          <div id="education">
+            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+            <h6 id="edu_time" class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>[[time]]</h6>
+            <p id="UNIVERSITY" class="w3-opacity"><b>University</b></p>
+            <p id="university"><i class="fa fa-university fa-fw w3-margin-right w3-large w3-text-teal"></i>[[university]]</p>
+            <p id="CPA" class="w3-opacity"><b>CPA</b></p>
+            <p id="cpa"><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-teal"></i>[[cpa]]</p>
+            <p id="MAJOR" class="w3-opacity"><b>Major</b></p>
+            <p id="major"><i class="fa fa-paper-plane fa-fw w3-margin-right w3-large w3-text-teal"></i>[[major]]</p>
+          </div>
+
+        </div>
+          <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Awards</h2>
+        <div class="w3-container" id="awards">
+
+        </div>
+      </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom" >
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        <div class="w3-container" id="experience">
+          <!-- <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5> -->
+          <h6 class="w3-text-teal exp_time"><i class="fa fa-calendar fa-fw w3-margin-right"></i>[[time]]</h6>
+          <p class="company">[[company]]</p>
+          <h5 class="w3-opacity position"><b>[[position]]</b></h5>
+          <p class="programming">[[programming]]</p>
+          <p class="project">[[project]]</p>
+          <p class="description">[[descriptions]]</p>
+          <hr>
+        </div>
+      </div>
+        <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-tasks fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Skills</h2>
+        <div class="w3-container" id="skill">
+
+            <h5 class="w3-opacity skills_title" ><b>Language</b></h5>
+            <p class="w3-container" id ="skill_language">[[language]]</p>
+            <h5 class="w3-opacity skills_title" ><b>Programming</b></h5>
+            <p class="w3-container" id ="skill_programming">[[programming]]</p>
+            <h5 class="w3-opacity skills_title"><b>Description</b></h5>
+            <p class="w3-container" id="skill_description">[[descriptions]]</p>
+        </div>
+            
+      </div>
+    <!-- End Right Column -->
+    </div>
+        <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom" >
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Hobbies</h2>
+        <div class="w3-container" id="hobbies">
+            <ul id="checkHobbies">
+              <li class="li_hobbies"></li>
+            </ul>
+        </div>
+      </div>
+        <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-tasks fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Others</h2>
+        <div class="w3-container" id="others">
+            <ul id="checkOthers">
+              <li class="li_others"></li>
+            </ul>
+        </div>
+            
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p style="color: #000 !important; font-weight: 500; padding-top: 9px;">Find us on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+<script
+  src="https://code.jquery.com/jquery-1.8.0.js"
+  integrity="sha256-00Fh8tkPAe+EmVaHFpD+HovxWk7b97qwqVi7nLvjdgs="
+  crossorigin="anonymous"></script>
+<script src="{% static 'js/jquery.miranda.js' %}"></script>
+   <script>
+        var myData = {{ msg|safe }};
+            console.log(myData);
+    </script>
+<script type="text/javascript" src="/static/js/Info.js"></script>
+<script type="text/javascript">
+  function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#profile_image')
+                        .attr('src', e.target.result)
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+</body>
+</html>
