@@ -43,7 +43,7 @@ $(document).ready(function(){
           $("#language_cv_selected").text("Select one!");
         }
         if(comparingResult_cpa==0){
-          $("#cpa").append("Type your CPA here!");
+          $("#cpa>span").text("Type your CPA here!");
         }
         if(comparingResult_name==0||personal_Details_name==""){
           $("#personal_Details_name").text("No name. Let's add one!");
@@ -61,7 +61,7 @@ $(document).ready(function(){
           $("#phone").append("Type your phone number here!");
         }
         if(comparingResult_applyingPosition==0){
-          $("#applyingPosition").append("Type your applying position here!");
+          $("#applyingPosition>span").text("Type your applying position here!");
         }
         if(comparingResult_edu_time==0){
           $("#edu_time").append("Type your learning period here!");
@@ -94,13 +94,13 @@ $(document).ready(function(){
           $(".li_objective").text("Write your objective here!");
         }
         if(skill_programming==""){
-          $("#skill_programming").append("Type your programming skills here!");
+          $("#skill_programming").text("Type your programming skills here!");
         }
         if(skill_language==""){
-          $("#skill_language").append("Type your language skills here!");
+          $("#skill_language").text("Type your language skills here!");
         }
         if(skill_description==""){
-          $("#skill_description").append("Type your description here!");
+          $("#skill_description").text("Type your description here!");
         }
     });
     //handle saving data
