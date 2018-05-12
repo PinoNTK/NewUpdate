@@ -38,8 +38,16 @@ p{
     background-color: #009688!important;
     display:none;
 }
+#addExperience{
+	width: 10%;
+    height: 34px;
+    background-color: #009688!important;
+}
 #hr_line{
 	width: 93%; 
 	margin-left: 3%;
+	display: none;
+}
+#addClassExp{
 	display: none;
 }

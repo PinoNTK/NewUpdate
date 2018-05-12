@@ -38,7 +38,7 @@ $(document).ready(function(){
         $("#language_cv_select").prop('disabled', false);
         $("#sex").prop('disabled', false);
         $("#language_cv,#personal_Details_name,#phone,#birthday,#address,#sex,#mail,#applyingPosition,#edu_time,#major,#university,.exp_time,.project,.company,.position,.programming,.skills_title,#skill_programming,#skill_language,#skill_description,.li_hobbies,.li_others,.li_objective,#cpa,#CPA").show();
-        
+        $("#addExperience").show();
         if(comparingResult_language_cv==0){
           $("#language_cv_selected").text("Select one!");
         }
@@ -87,6 +87,9 @@ $(document).ready(function(){
         if(comparingResult_programming==0){
           $(".description").text("Type your programming language here!");
         }
+        if(comparingResult_sex==0){
+          $("#sex_selected").text("Select one!");
+        }
         if(li_OthersContent==""){
           $(".li_others").text("Type something here!");
         }
@@ -115,7 +118,12 @@ $(document).ready(function(){
         $("#saveInfo,#changePhoto,#hr_line").hide();
         $("#language_cv_select").prop('disabled', true);
         $("#sex").prop('disabled', true);
+        $("#addExperience").hide();
     });
+    // handle Add Experience event
+    $("#addExperience").click(function(){
+      $("#addClassExperience").show();
+    })
     // handle upload photo event
     $(function(){
     $("#changePhoto").on('click', function(e){
@@ -124,206 +132,251 @@ $(document).ready(function(){
     });
     });
     // handle null data
-    var pattern="[[]]";
+    var pattern="[";
     //language_cv
     var language_cv= $( "#language_cv_selected" ).text();
-    var language_cvInShort=language_cv[0]+language_cv[1]+ language_cv[language_cv.length-2]+language_cv[language_cv.length-1]
-    var comparingResult_language_cv = language_cvInShort.localeCompare(pattern);
-    console.log(language_cv);
-    if(comparingResult_language_cv==0){
-      $("#language_cv_selected").hide();
+    
+    
+    if(language_cv!=""){
+      var language_cvInShort=language_cv[0]
+      var comparingResult_language_cv = language_cvInShort.localeCompare(pattern);
+      if(comparingResult_language_cv==0){
+      $("#language_cv_selected").text("No data.");
+      }
+
+    } else{
+      $("#language_cv_selected").text("No data. Select one!")
     }
-    if(language_cv==""){
-      $("#language_cv_selected").text("Select one!")
+    //sex
+    var sex= $( "#sex_selected" ).text();
+    
+    console.log(sex);
+    if(sex!=""){
+      var sexInShort=sex[0]
+      var comparingResult_sex = sexInShort.localeCompare(pattern);
+      if(comparingResult_sex==0){
+      $("#sex_selected").text("No data.");
+      }
+    } else{
+      $("#sex_selected").text("No data. Select one!")
     }
+
     //cpa:
     var cpa= $( "#cpa" ).text();
-    var cpaInShort=cpa[0]+cpa[1]+ cpa[cpa.length-2]+cpa[cpa.length-1]
-    var comparingResult_cpa = cpaInShort.localeCompare(pattern);
-    if(comparingResult_cpa==0){
-      $("#cpa,#CPA").hide();
-    }
-    if(cpa==""){
-      $("#cpa").append("Type your CPA here!")
+   
+    
+    if(cpa!=""){
+          var cpaInShort=cpa[0];
+          var comparingResult_cpa = cpaInShort.localeCompare(pattern);
+          if(comparingResult_cpa==0){
+          $("#cpa,#CPA").hide();
+          }
+    }else{
+      $("#cpa").append("No data. Let's update your CPA!")
     }
     //name:
     var personal_Details_name= $( "#personal_Details_name" ).text();
-    var nameInShort=personal_Details_name[0]+personal_Details_name[1]+ personal_Details_name[personal_Details_name.length-2]+personal_Details_name[personal_Details_name.length-1]
-    var comparingResult_name = nameInShort.localeCompare(pattern);
-    if(comparingResult_name==0||personal_Details_name==""){
+    
+    if(personal_Details_name!=""){
+      var nameInShort=personal_Details_name[0];
+      var comparingResult_name = nameInShort.localeCompare(pattern);
+      if(comparingResult_name==0){
+      $("#personal_Details_name").text("No name. Let's add one!");
+      }
+    } else{
       $("#personal_Details_name").text("No name. Let's add one!");
     }
     //birthday:
     var birthday= $( "#birthday" ).text();
-    var birthdayInShort=birthday[0]+birthday[1]+ birthday[birthday.length-2]+birthday[birthday.length-1]
-    var comparingResult_birthday = birthdayInShort.localeCompare(pattern);
-    if(comparingResult_birthday==0){
-      $("#birthday").hide();
-    }
-    if(birthday==""){
-      $("#birthday").text("Type your birthday here!")
+
+    if(birthday!=""){
+      var birthdayInShort=birthday[0];
+      var comparingResult_birthday = birthdayInShort.localeCompare(pattern);
+      if(comparingResult_birthday==0){
+        $("#birthday").hide();
+      }
+    } else{
+      $("#birthday").text("No data. Let's update your birthday!")
     }
     //address:
     var address= $( "#address" ).text();
-    var addressInShort=address[0]+address[1]+ address[address.length-2]+address[address.length-1]
-    var comparingResult_address = addressInShort.localeCompare(pattern);
-    if(comparingResult_address==0){
-      $("#address").hide();
-    }
-    if(address==""){
-      $("#address").text("Type your address here!");
+    
+    if(address!=""){
+      var addressInShort=address[0];
+      var comparingResult_address = addressInShort.localeCompare(pattern);
+      if(comparingResult_address==0){
+        $("#address").hide();
+      }
+    } else{
+      $("#address").text("No data. Let's update your address!");
     }
     //mail:
     var mail= $( "#mail" ).text();
-    var mailInShort=mail[0]+mail[1]+ mail[mail.length-2]+mail[mail.length-1]
-    var comparingResult_mail = mailInShort.localeCompare(pattern);
-    if(comparingResult_mail==0){
-      $("#mail").hide();
-    }
-    if(mail==""){
-      $("#mail").append("Type your mail address here!")
+    if(mail!=""){
+      var mailInShort=mail[0];
+      var comparingResult_mail = mailInShort.localeCompare(pattern);
+      if(comparingResult_mail==0){
+        $("#mail").hide();
+      }
+    } else{
+      $("#mail").append("No data. Let's update your mail address!")
     }
     //phone:
     var phone= $( "#phone" ).text();
-    var phoneInShort=phone[0]+phone[1]+ phone[phone.length-2]+phone[phone.length-1]
-    var comparingResult_phone = phoneInShort.localeCompare(pattern);
-    if(comparingResult_phone==0){
-      $("#phone").hide();
-    }
-    if(phone==""){
-      $("#phone").append("Type your phone number here!")
+    if(phone!=""){
+      var phoneInShort=phone[0];
+      var comparingResult_phone = phoneInShort.localeCompare(pattern);
+      if(comparingResult_phone==0){
+        $("#phone").hide();
+      }
+    } else{
+      $("#phone").append("No data. Let's update your phone number!")
     }
     //applyingPosition:
     var applyingPosition= $( "#applyingPosition" ).text();
-    var applyingPositionInShort=applyingPosition[0]+applyingPosition[1]+ applyingPosition[applyingPosition.length-2]+applyingPosition[applyingPosition.length-1]
-    var comparingResult_applyingPosition = applyingPositionInShort.localeCompare(pattern);
-    if(comparingResult_applyingPosition==0){
-      $("#applyingPosition").hide();
-    }
-    if(applyingPosition==""){
-      $("#applyingPosition").append("Type your applying position here!")
+    if(applyingPosition!=""){
+      var applyingPositionInShort=applyingPosition[0];
+      var comparingResult_applyingPosition = applyingPositionInShort.localeCompare(pattern);
+      if(comparingResult_applyingPosition==0){
+        $("#applyingPosition").hide();
+      }
+    } else{
+      $("#applyingPosition").append("No data.Let's update your applying position!")
     }
     //edu_time:
     var edu_time= $( "#edu_time" ).text();
-    var edu_timeInShort=edu_time[0]+edu_time[1]+ edu_time[edu_time.length-2]+edu_time[edu_time.length-1]
-    var comparingResult_edu_time = edu_timeInShort.localeCompare(pattern);
-    if(comparingResult_edu_time==0){
-      $("#edu_time").hide();
-    }
-    if(edu_time==""){
-      $("#edu_time").append("Type your learning period here!");
+    if(edu_time!=""){
+      var edu_timeInShort=edu_time[0];
+      var comparingResult_edu_time = edu_timeInShort.localeCompare(pattern);
+      if(comparingResult_edu_time==0){
+        $("#edu_time").hide();
+      }
+    } else{
+      $("#edu_time").append("No data. Let's update your learning period!");
     }
     //university:
     var university= $( "#university" ).text();
-    var universityInShort=university[0]+university[1]+ university[university.length-2]+university[university.length-1]
-    var comparingResult_university = universityInShort.localeCompare(pattern);
-    if(comparingResult_university==0){
-      $("#university,#UNIVERSITY").hide();
-    }
-    if(university==""){
-      $("#edu_time").append("Type your university here!");
+    if(university!=""){
+      var universityInShort=university[0];
+      var comparingResult_university = universityInShort.localeCompare(pattern);
+      if(comparingResult_university==0){
+        $("#university,#UNIVERSITY").hide();
+      }
+    } else{
+      $("#edu_time").append("No data. Let's update your university!");
     }
     //major:
     var major= $( "#major" ).text();
-    var majorInShort=major[0]+major[1]+ major[major.length-2]+major[major.length-1]
-    var comparingResult_major = majorInShort.localeCompare(pattern);
-    if(comparingResult_major==0){
-      $("#major,#MAJOR").hide();
-    }
-    if(major==""){
-      $("#major").append("Type your major here!");
+    if(major!=""){
+      var majorInShort=major[0];
+      var comparingResult_major = majorInShort.localeCompare(pattern);
+      if(comparingResult_major==0){
+        $("#major,#MAJOR").hide();
+      }
+    } else{
+      $("#major").append("No data. Let's update your major!");
     }
     //exp_time:
     var exp_time= $( ".exp_time" ).text();
-    var exp_timeInShort=exp_time[0]+exp_time[1]+ exp_time[exp_time.length-2]+exp_time[exp_time.length-1]
-    var comparingResult_exp_time = exp_timeInShort.localeCompare(pattern);
-    if(comparingResult_exp_time==0){
-      $(".exp_time").hide();
-    }
-    if(exp_time==""){
-      $(".exp_time").append("Type your working period here!");
+    if(exp_time!=""){
+      var exp_timeInShort=exp_time[0];
+      var comparingResult_exp_time = exp_timeInShort.localeCompare(pattern);
+      if(comparingResult_exp_time==0){
+        $(".exp_time").hide();
+      }
+    } else{
+      $(".exp_time").append("No data. Let's update your working period!");
     }
     //company:
     var company= $( ".company" ).text();
-    var companyInShort=company[0]+company[1]+ company[exp_time.length-2]+company[company.length-1]
-    var comparingResult_company = companyInShort.localeCompare(pattern);
-    if(comparingResult_company==0){
-      $(".company").hide();
-    }
-    if(company==""){
-      $(".company").append("Type your company here!");
+    if(company!=""){
+      var companyInShort=company[0];
+      var comparingResult_company = companyInShort.localeCompare(pattern);
+      if(comparingResult_company==0){
+        $(".company").hide();
+      }
+    } else{
+      $(".company").append("No data. Let's update your company!");
     }
     //position:
     var position= $( ".position" ).text();
-    var positionInShort=position[0]+position[1]+ position[position.length-2]+position[position.length-1]
-    var comparingResult_position = positionInShort.localeCompare(pattern);
-    if(comparingResult_position==0){
-      $(".position").hide();
-    }
-    if(position==""){
-      $(".position").append("Type your working position here!");
+    if(position!=""){
+      var positionInShort=position[0];
+      var comparingResult_position = positionInShort.localeCompare(pattern);
+      if(comparingResult_position==0){
+        $(".position").hide();
+      }
+    } else{
+      $(".position").append("No data. Let's update your working position!");
     }
     //programming:
     var programming= $( ".programming" ).text();
-    var programmingInShort=programming[0]+programming[1]+ programming[programming.length-2]+programming[programming.length-1]
-    var comparingResult_programming = programmingInShort.localeCompare(pattern);
-    if(comparingResult_programming==0){
-      $(".programming").hide();
-    }
-    if(programming==""){
-      $(".programming").append("Type your programming language here!");
+    if (programming!="") {
+      var programmingInShort=programming[0];
+      var comparingResult_programming = programmingInShort.localeCompare(pattern);
+      if(comparingResult_programming==0){
+        $(".programming").hide();
+      }
+    }else {
+      $(".programming").append("No data. Let's update your programming language!");
     }
     //project:
     var project= $( ".project" ).text();
-    var projectInShort=project[0]+project[1]+ project[project.length-2]+project[project.length-1]
-    var comparingResult_project = projectInShort.localeCompare(pattern);
-    if(comparingResult_project==0){
-      $(".project").hide();
-    }
-    if(project==""){
-      $(".project").append("Type your projects here!");
+    if (project!="") {
+      var projectInShort=project[0];
+      var comparingResult_project = projectInShort.localeCompare(pattern);
+      if(comparingResult_project==0){
+        $(".project").hide();
+      }
+    } else{
+      $(".project").append("No data. Let's update your projects here!");
     }
     //description:
     var description= $( ".description" ).text();
-    var descriptionInShort=description[0]+description[1]+ description[description.length-2]+description[description.length-1]
-    var comparingResult_description = descriptionInShort.localeCompare(pattern);
-    if(comparingResult_programming==0){
-      $(".description").hide();
-    }
-    if(programming==""){
-      $(".description").append("Type your programming language here!");
+    if(description!=""){
+      var descriptionInShort=description[0];
+      var comparingResult_description = descriptionInShort.localeCompare(pattern);
+      if(comparingResult_programming==0){
+        $(".description").hide();
+      }
+    } else{
+      $(".description").append("No data. Let's update your programming language!");
     }
     //skill_programming:
     var skill_programming= $( "#skill_programming" ).text();
-    var skill_programmingInShort=skill_programming[0]+skill_programming[1]+ skill_programming[skill_programming.length-2]+skill_programming[skill_programming.length-1];
-    // var comparingResult_skill_programming = skill_programmingInShort.localeCompare(pattern);
+    
     console.log(skill_programming);
-    // if(comparingResult_skill_programming==0){
-    //   $("#skill_programming").hide();
-    // }
-    // if(skill_programming==""){
-    //   $("#skill_programming").append("Type your programming skills here!");
-    // }
+    if(skill_programming!=""){
+      var skill_programmingInShort=skill_programming[0];
+      var comparingResult_skill_programming = skill_programmingInShort.localeCompare(pattern);
+      if(comparingResult_skill_programming==0){
+        $("#skill_programming").hide();
+      }
+    }else{
+      $("#skill_programming").append("No data. Let's update your programming skills!");
+    }
     //skill_language:
     var skill_language= $( "#skill_language" ).text();
-    //var skill_languageInShort=skill_language[0]+skill_language[1]+ skill_language[skill_language.length-2]+skill_language[skill_language.length-1]
-    // var comparingResult_skill_language = skill_languageInShort.localeCompare(pattern);
-    // if(comparingResult_skill_language==0){
-    //   $("#skill_language").hide();
-    // }
-    // if(skill_language==""){
-    //   $("#skill_language").append("Type your language skills here!");
-    // }
+    if(skill_language!=""){
+      var skill_languageInShort=skill_language[0];
+      var comparingResult_skill_language = skill_languageInShort.localeCompare(pattern);
+      if(comparingResult_skill_language==0){
+        $("#skill_language").hide();
+      }
+    } else{
+      $("#skill_language").append("No data. Let's update your language skills here!");
+    }
     //skill_description:
     var skill_description= $( "#skill_description" ).text();
-    // var skill_descriptionInShort=skill_description[0]+skill_description[1]+ skill_description[skill_description.length-2]+skill_description[skill_description.length-1]
-    // var comparingResult_skill_description = skill_descriptionInShort.localeCompare(pattern);
-    // if(comparingResult_skill_description==0){
-    //   $("#skill_description").hide();
-    // }
-    // if(skill_description==""){
-    //   $("#skill_description").append("Type your a description for your skills here!");
-    // }
+    if(skill_description!=""){
+      var skill_descriptionInShort=skill_description[0]+skill_description[1]+ skill_description[skill_description.length-2]+skill_description[skill_description.length-1]
+      var comparingResult_skill_description = skill_descriptionInShort.localeCompare(pattern);
+      if(comparingResult_skill_description==0){
+        $("#skill_description").hide();
+      }
+    } else{
+      $("#skill_description").append("No data. Let's update a description for your skills!");
+    }
     // checkOthers:
     var li_OthersContent= $( "#checkOthers>.li_others" ).text();
     if(li_OthersContent==""){

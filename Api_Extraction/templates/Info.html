@@ -68,7 +68,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", "sans-serif" !important};
               <div class="col-sm-1"><i class="fa fa-venus-mars fa-fw w3-margin-right w3-large w3-text-teal"></i></div>
               <div class="col-sm-5">
                 <select class="form-control editSelect" id="sex" disabled="true">
-                  <option selected="selected" >[[sex]]</option>
+                  <option selected="selected" id="sex_selected">[[sex]]</option>
                   <option>Male</option>
                   <option>Female</option>
                   <option>Not indentified</option>
@@ -125,6 +125,19 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", "sans-serif" !important};
           <p class="project">[[project]]</p>
           <p class="description">[[descriptions]]</p>
           <hr>
+        </div>
+        <div class="w3-container" id="addClassExperience" style="display: none">
+          <!-- <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5> -->
+          <h6 class="w3-text-teal exp_time"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span>Type your working period here!</span></h6>
+          <p class="company">Type your company here!</p>
+          <h5 class="w3-opacity position"><b>Type your position here!</b></h5>
+          <p class="programming">Type your programming experience here!</p>
+          <p class="project">Type your projects' name here</p>
+          <p class="description">Write a description about your experience here!</p>
+          <hr>
+        </div>
+        <div class="row" style="padding-bottom: 2%;">
+            <button type="button" id="addExperience" class="btn btn-primary" style="width: 10%;height: 34px;background-color: #009688!important; display: none; margin-left: 44%;">Add</button>
         </div>
       </div>
         <div class="w3-container w3-card w3-white">
